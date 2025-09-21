@@ -27,6 +27,9 @@ dist/
 *.sublime-project
 *.sublime-workspace
 
+# chapterwise dialogues
+dialogue/
+
 # OS files
 .DS_Store
 Thumbs.db
