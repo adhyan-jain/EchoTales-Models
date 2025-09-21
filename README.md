@@ -1,6 +1,6 @@
 # BookNLP Character & Dialogue Processing Pipeline
 
-A comprehensive system for processing books through BookNLP and extracting character personality vectors, demographics, and dialogue with emotion analysis. Designed to handle large-scale processing of 150+ chapters with 200K-400K words.
+A comprehensive system for processing books through BookNLP and extracting character personality vectors, demographics, and dialogue with emotion analysis. Designed to handle large-scale processing of 200+ chapters with 200K-400K words.
 
 ## 🚀 Features
 
@@ -52,7 +52,7 @@ booknlp-processing/
 ## 🛠️ Installation
 
 ### Prerequisites
-- Python 3.8+
+- Python 3.13
 - BookNLP installed and configured
 - Required Python packages (see requirements.txt)
 
@@ -74,33 +74,13 @@ pip install -r requirements.txt
 
 ```bash
 # Process a single book with character extraction
-python character_processor.py
+python advanced_character_processor.py
 
 # Process dialogue for the same book
 python dialogue_processor.py
 
 # Run complete pipeline
-python main_pipeline.py --book-id samples --report
-```
-
-### 2. Enhanced Processing
-
-```bash
-# Use enhanced character processor with better personality inference
-python enhanced_character_processor.py
-```
-
-### 3. Batch Processing (Multiple Books)
-
-```bash
-# Auto-discover and process all books in output directory
-python batch_processor.py --auto-discover --parallel
-
-# Process specific books
-python batch_processor.py --book-ids book1 book2 book3 --parallel
-
-# Sequential processing (for debugging)
-python batch_processor.py --book-ids samples --sequential
+python run_advanced_pipeline.py
 ```
 
 ### 4. Configuration
@@ -182,21 +162,11 @@ The system infers personality traits using pattern matching and context analysis
 
 ## 🚀 Scalability for Large Datasets
 
-### For 150 Chapters (200K-400K words):
-
-1. **Batch Processing**: Use `batch_processor.py` for multiple books
-2. **Parallel Processing**: Enable multi-threading with `--max-workers`
-3. **Memory Management**: Configure chunk sizes and lazy loading
-4. **Database Storage**: Optional SQLite for very large datasets
-
 ### Performance Tips:
 
 ```bash
 # Optimize for large datasets
 python batch_processor.py --auto-discover --parallel --max-workers 8
-
-# Monitor progress
-tail -f batch_results/batch_report_*.json
 ```
 
 ## 📈 Performance Metrics
@@ -205,35 +175,7 @@ Based on sample processing:
 - **Character Extraction**: ~0.1s per character
 - **Dialogue Processing**: ~0.05s per dialogue line
 - **Memory Usage**: ~50MB per 10K words
-- **Parallel Processing**: 3-5x speedup with 4 workers
-
-## 🔧 Customization
-
-### Adding New Personality Patterns
-
-Edit `enhanced_character_processor.py`:
-
-```python
-self.personality_patterns['new_trait'] = {
-    'positive': ['positive', 'indicators'],
-    'negative': ['negative', 'indicators']
-}
-```
-
-### Custom Emotion Detection
-
-Edit `dialogue_processor.py`:
-
-```python
-self.emotion_patterns['new_emotion'] = ['emotion', 'indicators']
-```
-
-### Model Integration
-
-The system is designed to integrate with:
-- **TTS Systems**: OpenVoice, Azure TTS, etc.
-- **Emotion Models**: BERT-based emotion classification
-- **Personality Models**: ML-based personality inference
+- **Chapter Processing**: 1s per chapter
 
 ## 📋 Example Workflow
 
@@ -295,25 +237,6 @@ Real-time progress monitoring:
 2. **Memory Issues**: Reduce `max_workers` or enable lazy loading
 3. **Character Detection**: Adjust personality patterns for your text domain
 4. **Dialogue Extraction**: Check quote attribution model quality
-
-### Debug Mode
-
-```bash
-# Enable detailed logging
-python -m logging DEBUG character_processor.py
-
-# Sequential processing for debugging
-python batch_processor.py --sequential --book-ids problematic_book
-```
-
-## 🤝 Contributing
-
-To extend the system:
-
-1. **Add new processors** in separate modules
-2. **Enhance personality patterns** based on your domain
-3. **Integrate ML models** for better inference
-4. **Add new output formats** as needed
 
 ## 📄 License
 
