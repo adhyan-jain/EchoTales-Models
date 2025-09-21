@@ -1,0 +1,55 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+venv/
+env/
+*.env
+.venv/
+
+# Python distribution / packaging
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Logs
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# IDEs
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Output data
+modelsbooknlp/output/
+characters/
+audio/
+*.csv
+*.tsv
+*.pkl
+*.pt
+*.pth
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+
+# Secrets / configs
+config.json
+*.key
+*.pem
+
+
+clips

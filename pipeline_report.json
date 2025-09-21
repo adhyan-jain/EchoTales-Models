@@ -1,0 +1,630 @@
+{
+  "total_books_processed": 1,
+  "successful_books": 1,
+  "failed_books": 0,
+  "total_characters": 31,
+  "total_dialogue_lines": 6,
+  "total_chapters": 4,
+  "books": {
+    "samples": {
+      "book_id": "samples",
+      "character_processing": {
+        "output_file": "characters\\characters.json",
+        "character_count": 31,
+        "characters": [
+          {
+            "character_id": "char_009",
+            "name": "Zhou Mingrui",
+            "booknlp_id": 9,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Zhou_Mingrui/",
+            "mention_count": 114,
+            "quote_count": 0,
+            "is_proper_name": true,
+            "quotes": []
+          },
+          {
+            "character_id": "char_000",
+            "name": "I",
+            "booknlp_id": 0,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/I/",
+            "mention_count": 21,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_011",
+            "name": "Klein",
+            "booknlp_id": 11,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Klein/",
+            "mention_count": 11,
+            "quote_count": 0,
+            "is_proper_name": true,
+            "quotes": []
+          },
+          {
+            "character_id": "char_013",
+            "name": "Hehe",
+            "booknlp_id": 13,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Hehe/",
+            "mention_count": 2,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_027",
+            "name": "himself",
+            "booknlp_id": 27,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/himself/",
+            "mention_count": 2,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_031",
+            "name": "She",
+            "booknlp_id": 31,
+            "age_group": "Young Adult",
+            "gender": "Female",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/She/",
+            "mention_count": 2,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_036",
+            "name": "They",
+            "booknlp_id": 36,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/They/",
+            "mention_count": 2,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_050",
+            "name": "him",
+            "booknlp_id": 50,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/him/",
+            "mention_count": 2,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_010",
+            "name": "Pa",
+            "booknlp_id": 10,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Pa/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": true,
+            "quotes": []
+          },
+          {
+            "character_id": "char_012",
+            "name": "Character_12",
+            "booknlp_id": 12,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_12/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_015",
+            "name": "their",
+            "booknlp_id": 15,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/their/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_016",
+            "name": "Character_16",
+            "booknlp_id": 16,
+            "age_group": "Middle Aged",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_16/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_021",
+            "name": "Character_21",
+            "booknlp_id": 21,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_21/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_023",
+            "name": "Character_23",
+            "booknlp_id": 23,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_23/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_025",
+            "name": "Character_25",
+            "booknlp_id": 25,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_25/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_026",
+            "name": "Character_26",
+            "booknlp_id": 26,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_26/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_028",
+            "name": "Character_28",
+            "booknlp_id": 28,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_28/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_032",
+            "name": "Character_32",
+            "booknlp_id": 32,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_32/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_033",
+            "name": "Character_33",
+            "booknlp_id": 33,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_33/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_034",
+            "name": "Character_34",
+            "booknlp_id": 34,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_34/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_035",
+            "name": "Character_35",
+            "booknlp_id": 35,
+            "age_group": "Teenager",
+            "gender": "Female",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_35/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_038",
+            "name": "Character_38",
+            "booknlp_id": 38,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_38/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_039",
+            "name": "Character_39",
+            "booknlp_id": 39,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_39/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_040",
+            "name": "Character_40",
+            "booknlp_id": 40,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_40/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_042",
+            "name": "Character_42",
+            "booknlp_id": 42,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_42/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_043",
+            "name": "Character_43",
+            "booknlp_id": 43,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_43/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_045",
+            "name": "It",
+            "booknlp_id": 45,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/It/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_046",
+            "name": "Character_46",
+            "booknlp_id": 46,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_46/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_047",
+            "name": "Character_47",
+            "booknlp_id": 47,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_47/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_048",
+            "name": "they",
+            "booknlp_id": 48,
+            "age_group": "Young Adult",
+            "gender": "Male",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/they/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          },
+          {
+            "character_id": "char_049",
+            "name": "Character_49",
+            "booknlp_id": 49,
+            "age_group": "Young Adult",
+            "gender": "Unknown",
+            "personality": {
+              "O": 0.5,
+              "C": 0.5,
+              "E": 0.5,
+              "A": 0.5,
+              "N": 0.5
+            },
+            "audio_file": "audio/Character_49/",
+            "mention_count": 1,
+            "quote_count": 0,
+            "is_proper_name": false,
+            "quotes": []
+          }
+        ]
+      },
+      "dialogue_processing": {
+        "summary": {
+          "total_chapters": 4,
+          "total_dialogue_lines": 6,
+          "unique_characters": 2,
+          "emotion_distribution": {
+            "neutral": 6
+          },
+          "characters_in_dialogue": [
+            "char_000",
+            "char_009"
+          ]
+        },
+        "dialogue_files": [
+          "dialogue\\chapter_002.json",
+          "dialogue\\chapter_003.json",
+          "dialogue\\chapter_008.json",
+          "dialogue\\chapter_018.json"
+        ]
+      },
+      "success": true,
+      "error": null
+    }
+  }
+}
