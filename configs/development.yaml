@@ -1,0 +1,113 @@
+# Development Configuration
+app:
+  name: "EchoTales-Enhanced"
+  version: "2.0.0"
+  environment: "development"
+  debug: true
+  host: "localhost"
+  port: 5000
+
+database:
+  type: "sqlite"
+  url: "sqlite:///data/cache/echotales_dev.db"
+  echo: true
+
+redis:
+  host: "localhost"
+  port: 6379
+  db: 0
+  decode_responses: true
+
+processing:
+  booknlp:
+    models_path: "models/booknlp/"
+    batch_size: 32
+    max_workers: 4
+  
+  character_analysis:
+    personality_model: "bert-base-uncased"
+    emotion_model: "j-hartmann/emotion-english-distilroberta-base"
+    physical_description_model: "microsoft/DialoGPT-medium"
+    
+  scene_analysis:
+    setting_classifier: "facebook/bart-large-mnli"
+    transition_detector: "sentence-transformers/all-MiniLM-L6-v2"
+
+voice_dataset:
+  path: "data/voice_dataset/"
+  male_actors: 12
+  female_actors: 12
+  samples_per_actor: 44
+  supported_formats: ["wav", "mp3", "flac"]
+  
+  classification:
+    features: ["pitch", "tempo", "timbre", "emotion", "age_group"]
+    similarity_threshold: 0.8
+    
+  processing:
+    sample_rate: 22050
+    duration_range: [2, 10]  # seconds
+    noise_reduction: true
+
+tts:
+  default_engine: "openvoice"
+  engines:
+    openvoice:
+      model_path: "models/tts/openvoice/"
+      device: "cuda"
+      quality: "high"
+    elevenlabs:
+      api_key: "${ELEVENLABS_API_KEY}"
+      voice_stability: 0.5
+      voice_similarity: 0.5
+    edge:
+      language: "en-US"
+      rate: "+0%"
+      pitch: "+0Hz"
+    bark:
+      model_path: "models/tts/bark/"
+      device: "cuda"
+
+audio:
+  output_format: "mp3"
+  sample_rate: 22050
+  bitrate: "192k"
+  quality: "high"
+  effects:
+    normalize: true
+    fade_in: 0.1
+    fade_out: 0.2
+    silence_threshold: -50
+
+image_generation:
+  provider: "stability"  # or "openai", "local"
+  stability:
+    api_key: "${STABILITY_API_KEY}"
+    engine_id: "stable-diffusion-xl-1024-v1-0"
+  
+  character_portraits:
+    style: "realistic"
+    resolution: "1024x1024"
+    batch_size: 4
+    
+  scene_generation:
+    style: "cinematic"
+    resolution: "1920x1080"
+    aspect_ratio: "16:9"
+
+caching:
+  enabled: true
+  ttl: 3600  # seconds
+  storage: "redis"
+  keys:
+    novels: "novel:{book_id}"
+    characters: "characters:{book_id}"
+    audio: "audio:{book_id}:{chapter}"
+    images: "images:{book_id}:{character_id}"
+
+logging:
+  level: "DEBUG"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/development.log"
+  max_size: "10MB"
+  backup_count: 5
