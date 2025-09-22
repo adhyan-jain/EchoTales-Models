@@ -80,20 +80,96 @@ audio:
     silence_threshold: -50
 
 image_generation:
-  provider: "stability"  # or "openai", "local"
-  stability:
-    api_key: "${STABILITY_API_KEY}"
-    engine_id: "stable-diffusion-xl-1024-v1-0"
+  # Output directory for generated images
+  output_directory: "data/output/images"
   
-  character_portraits:
-    style: "realistic"
-    resolution: "1024x1024"
-    batch_size: 4
-    
-  scene_generation:
-    style: "cinematic"
-    resolution: "1920x1080"
-    aspect_ratio: "16:9"
+  # Default settings
+  default_provider: "auto"  # Auto-select best available provider
+  default_style: "photorealistic"
+  default_size: "1024x1024"
+  default_quality: "standard"
+  
+  # API Provider Settings (ordered by preference - free first)
+  providers:
+    # Google Gemini (Free tier - best option for prompt enhancement)
+    gemini:
+      enabled: true
+      api_key: "${GEMINI_API_KEY}"
+      max_requests_per_minute: 15
+      free_tier: true
+      priority: 1  # Highest priority
+      features:
+        - "prompt_enhancement"
+        - "text_to_image_via_fallback"
+      
+    # HuggingFace (Free tier available)
+    huggingface:
+      enabled: true
+      api_key: "${HUGGINGFACE_API_KEY}"
+      max_requests_per_minute: 10
+      free_tier: true
+      priority: 2
+      model: "stabilityai/stable-diffusion-xl-base-1.0"
+      alternative_models:
+        - "runwayml/stable-diffusion-v1-5"
+        - "CompVis/stable-diffusion-v1-4"
+      features:
+        - "text_to_image"
+        - "negative_prompts"
+        - "custom_parameters"
+      
+    # OpenAI DALL-E (Limited use - high quality)
+    openai:
+      enabled: true
+      api_key: "${OPENAI_API_KEY}"
+      max_requests_per_minute: 5
+      free_tier: false
+      priority: 3
+      model: "dall-e-3"
+      fallback_model: "dall-e-2"
+      features:
+        - "text_to_image"
+        - "high_quality"
+        - "prompt_revision"
+      
+    # Stability AI (Paid but excellent quality)
+    stability:
+      enabled: false  # Disabled by default due to cost
+      api_key: "${STABILITY_API_KEY}"
+      engine_id: "stable-diffusion-xl-1024-v1-0"
+      max_requests_per_minute: 20
+      free_tier: false
+      priority: 4
+      features:
+        - "text_to_image"
+        - "advanced_parameters"
+        - "multiple_models"
+  
+  # Style presets for different image types
+  style_presets:
+    character_portraits:
+      style: "portrait"
+      size: "1024x1024"
+      prefix: "professional portrait, detailed facial features, studio lighting,"
+      suffix: "masterpiece, best quality, highly detailed"
+      
+    scene_backgrounds:
+      style: "cinematic"
+      size: "1024x1024"
+      prefix: "cinematic shot, dramatic lighting, movie still, high production value,"
+      suffix: "masterpiece, best quality, highly detailed, wide angle"
+      
+    book_covers:
+      style: "artistic"
+      size: "1024x1536"
+      prefix: "professional book cover design, artistic rendering, typography space,"
+      suffix: "masterpiece, best quality, highly detailed, marketing quality"
+      
+    fantasy_art:
+      style: "fantasy"
+      size: "1024x1024"
+      prefix: "fantasy art, magical atmosphere, detailed fantasy illustration,"
+      suffix: "masterpiece, best quality, highly detailed, fantasy style"
 
 caching:
   enabled: true

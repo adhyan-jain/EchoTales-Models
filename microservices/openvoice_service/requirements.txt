@@ -1,0 +1,28 @@
+# OpenVoice Microservice Requirements
+
+# FastAPI and server
+fastapi==0.109.0
+uvicorn[standard]==0.27.0
+python-multipart==0.0.7
+
+# HTTP client for fallback
+httpx==0.27.0
+
+# TTS Fallback
+edge-tts==7.2.3
+
+# Audio processing (minimal)
+numpy<2.0
+scipy
+
+# Basic utilities
+pathlib
+asyncio
+hashlib
+logging
+
+# Optional: OpenVoice dependencies (install separately if needed)
+# torch
+# torchaudio
+# librosa
+# soundfile

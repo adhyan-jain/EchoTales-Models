@@ -1,0 +1,425 @@
+# EchoTales .gitignore
+
+# =============================================================================
+# SENSITIVE FILES AND SECRETS
+# =============================================================================
+.env
+.env.local
+.env.production
+.env.staging
+*.key
+*.pem
+*.p12
+*.crt
+secrets/
+config/production/
+
+# =============================================================================
+# PYTHON
+# =============================================================================
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# PyInstaller
+#  Usually these files are written by a python script from a template
+#  before PyInstaller builds the exe, so as to inject date/other infos into it.
+*.manifest
+*.spec
+
+# Installer logs
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Unit test / coverage reports
+htmlcov/
+.tox/
+.nox/
+.coverage
+.coverage.*
+.cache
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+.hypothesis/
+.pytest_cache/
+cover/
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# =============================================================================
+# AI/ML MODELS AND CACHE
+# =============================================================================
+models/
+*.model
+*.pkl
+*.joblib
+*.h5
+*.hdf5
+*.pb
+*.onnx
+*.tflite
+*.bin
+*.safetensors
+
+# HuggingFace cache
+.cache/
+transformers_cache/
+huggingface_hub/
+
+# Model checkpoints
+checkpoints/
+*.ckpt
+*.pth
+*.pt
+
+# =============================================================================
+# DATA AND GENERATED CONTENT
+# =============================================================================
+# Raw data (often large files)
+data/raw/books/*.txt
+data/raw/books/*.epub
+data/raw/books/*.pdf
+data/raw/books/*.docx
+
+# Generated audio files
+data/output/audio/
+*.wav
+*.mp3
+*.m4a
+*.flac
+*.ogg
+
+# Generated images
+data/output/images/
+data/output/character_portraits/
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.bmp
+*.tiff
+
+# Processed data cache
+data/processed/cache/
+data/processed/temp/
+
+# Voice dataset (large audio files)
+data/voice_dataset/*/
+audio/male/
+audio/female/
+
+# =============================================================================
+# LOGS AND MONITORING
+# =============================================================================
+logs/
+*.log
+*.log.*
+log/
+
+# =============================================================================
+# DATABASES
+# =============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.db-journal
+
+# =============================================================================
+# REDIS DUMPS
+# =============================================================================
+dump.rdb
+*.rdb
+
+# =============================================================================
+# JUPYTER NOTEBOOKS
+# =============================================================================
+.ipynb_checkpoints/
+*.ipynb
+
+# =============================================================================
+# IDE AND EDITOR FILES
+# =============================================================================
+# VSCode
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+*.elc
+auto-save-list
+tramp
+.\#*
+
+# =============================================================================
+# OPERATING SYSTEM
+# =============================================================================
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+Icon
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+
+# Linux
+*~
+.fuse_hidden*
+.directory
+.Trash-*
+.nfs*
+
+# =============================================================================
+# DOCKER
+# =============================================================================
+# Docker volumes
+docker-data/
+postgres-data/
+redis-data/
+
+# =============================================================================
+# TEMPORARY AND CACHE FILES
+# =============================================================================
+temp/
+tmp/
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+
+# Thumbnails
+thumbs/
+thumbnails/
+
+# =============================================================================
+# PACKAGE MANAGERS
+# =============================================================================
+# Node.js (if using any JS tools)
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# =============================================================================
+# CLOUD AND DEPLOYMENT
+# =============================================================================
+# Terraform
+*.tfstate
+*.tfstate.*
+.terraform/
+.terraform.lock.hcl
+
+# AWS
+.aws/
+
+# Google Cloud
+gcloud/
+*.json
+service-account-*.json
+
+# Kubernetes
+*.kubeconfig
+
+# =============================================================================
+# TESTING
+# =============================================================================
+# Test artifacts
+.pytest_cache/
+.coverage
+htmlcov/
+test-results/
+
+# Mock data
+tests/fixtures/large_files/
+tests/mock_data/audio/
+tests/mock_data/images/
+
+# =============================================================================
+# BUILD ARTIFACTS
+# =============================================================================
+build/
+dist/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# =============================================================================
+# DOCUMENTATION BUILD
+# =============================================================================
+docs/_build/
+docs/build/
+site/
+
+# =============================================================================
+# MONITORING AND PROFILING
+# =============================================================================
+# Performance profiles
+*.prof
+*.profile
+
+# Memory dumps
+*.hprof
+core.*
+
+# =============================================================================
+# PROJECT-SPECIFIC
+# =============================================================================
+# EchoTales specific temp directories
+data/temp/
+output/
+exports/
+
+# Processing artifacts
+*.processing
+*.inprogress
+*.processing.wav
+*.temp.wav
+*.chunk.wav
+
+# Microservices specific
+microservices/*/logs/
+microservices/*/temp/
+microservices/*/cache/
+microservices/*/.env
+microservices/*/config/local.yaml
+
+# API response cache
+api_cache/
+
+# Book analysis cache
+analysis_cache/
+
+# Voice cloning temporary files
+voice_temp/
+
+# Character portrait cache
+portrait_cache/
+
+# Scene image cache  
+scene_cache/
+
+# Dialogue and character processed JSONs
+data/processed/dialogues/
+data/processed/characters/
+
+# BookNLP working directory
+booknlp_temp/
+modelsbooknlp/output/
+
+# Audio processing workspace
+audio_workspace/
+generated_audio/
+
+# OpenVoice/TTS specific
+microservices/*/outputs/
+voice_models/
+*.ckpt.pt
+*.speaker_stats
+*.speaker_embeddings
+*.reference_audio
+tts_cache/
+voice_cache/
+speaker_embeddings/
+reference_speakers/
+*.reference.wav
+*.synthesized.wav
+*.cloned.wav
+
+# OpenVoice model files
+baseline/
+Convertor/
+open_voice_models/
+checkpoints/
+
+# =============================================================================
+# DEVELOPMENT
+# =============================================================================
+# Development configuration overrides
+config/development.local.yaml
+config/test.local.yaml
+
+# Developer notes
+NOTES.md
+TODO.md
+CHANGELOG.draft.md
+
+# Experimental scripts
+experiments/
+sandbox/
